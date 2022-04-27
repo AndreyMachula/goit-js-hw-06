@@ -25,12 +25,12 @@ const createBoxes = () => {
   let countBox = Number(input.getAttribute("count"));
   console.log(countBox);
   for (let i = 0; i < countBox; i++) {
-    baseBoxSize += 10;
     const newBox = document.createElement("div");
     newBox.style.background = getRandomHexColor();
     newBox.style.height = baseBoxSize + "px";
     newBox.style.width = baseBoxSize + "px";
     newBox.style.margin = "10px";
+    baseBoxSize += 10;
     newBox.classList.add("new-box");
     boxes.append(newBox);
   }
