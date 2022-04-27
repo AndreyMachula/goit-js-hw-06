@@ -22,12 +22,18 @@ const images = [
 const galleryEl = document.querySelector('.gallery');
 
 const imgEl = images
-  .map((image) => `<li><img src="${image.url}" alt="${image.alt}"></li>`)
+  .map((image) => `<li><img src="${image.url}" alt="${image.alt}" width="300"></li>`)
   .join('');
 console.log(imgEl);
 
 galleryEl.insertAdjacentHTML('beforeend', imgEl); 
 console.log(galleryEl);
+
+const stylesImages = document.querySelector(".gallery");
+  stylesImages.style.display = "flex";
+  stylesImages.style.flexDirection = "column";
+  stylesImages.style.listStyle = "none";
+  stylesImages.setAttribute("flex-direction", "column");
 
 //================================================================
 
