@@ -13,7 +13,7 @@ const addRemovePassword = (remove, add) => {
 };
 
 const validPassword = (symbols) => {
-  if (Number(validation.dataset.length) <= symbols.currentTarget.value.length) {
+  if (Number(validation.dataset.length) === symbols.currentTarget.value.length) {
     addRemovePassword("invalid", "valid");
   } else {
     addRemovePassword("valid", "invalid");
