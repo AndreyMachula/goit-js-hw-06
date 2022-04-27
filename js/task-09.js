@@ -2,15 +2,16 @@
 button.change-color и выводит значение цвета в span.color.
 */
 
-const widgetEl = document.querySelector('.widget');
+// const widgetEl = document.querySelector('.widget');
 const colorEl = document.querySelector('.color')
 const changeColorEl = document.querySelector('.change-color')
 
 changeColorEl.addEventListener('click', onBackroundColor)
 
 function onBackroundColor() {
-  widgetEl.style.backgroundColor = getRandomHexColor();
-  colorEl.textContent = getRandomHexColor();
+  const color = getRandomHexColor()
+  document.body.style.backgroundColor = color;
+  colorEl.textContent = color;
 }
 
 function getRandomHexColor() {
