@@ -3,6 +3,7 @@ const spanTextId = document.querySelector("#text");
 
 inputId.addEventListener("input", onControlRange);
 
-function onControlRange(event) {
-  spanTextId.style.fontSize = event.currentTarget.value + "px";
+function onControlRange() {
+  spanTextId.style.fontSize = inputId.value + "px";
 }
+onControlRange()
